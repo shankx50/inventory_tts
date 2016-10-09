@@ -17,10 +17,26 @@ A very popular and proven [*software architecture patter*](https://en.wikipedia.
 
 The **controller** is usually impacted first by a user/client foreign to the application. In web applications it usually is an HTTP request, and in our case, it is user input via a keyboard. The controller then decides which **models** of the application need to be engaged in order to fulfill the request. One can think of the controller as a hotel concierge who is the first point of contact for anyone entering the building. Depending on the request, the concierge knows where to send you next, or who to call.
 
+We'll create a directory controllers and create the main controller file inside of it.
+
+`mkdir controllers`
+
+`touch controllers/main_controller.rb`
+
 ####Model
 
 The **model** directly manages the data, logic and rules of the application. It usually consists of a class that contains a list of *attributes and behaviors*, as you may know. Attributes are often stored in a database and the model knows how to read or write that information. Behavior is represented by methods/functions defined within the class.
 
+We'll use two models. One represents the inventory and another one represents a single entry.
+
+`mkdir models`
+
+`touch models/entry.rb`
+
+`toch models/inventory_list.rb `
+
 ####View
 
 The **view** contains information pertaining to how data returned by the controller is represented. Layout and style (in combination with CSS files) are defined within the view. This inventory program will not require a view since we use the command line interface to connect to the program. In web applications the view often is an HTML file with embedded templating language such as embedded-ruby, PHP or TWIG.
+
+NB We'll also create a *runner file called inventory.rb* which we can call to start the application.
