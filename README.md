@@ -40,3 +40,17 @@ We'll use two models. One represents the inventory and another one represents a 
 The **view** contains information pertaining to how data returned by the controller is represented. Layout and style (in combination with CSS files) are defined within the view. This inventory program will not require a view since we use the command line interface to connect to the program. In web applications the view often is an HTML file with embedded templating language such as embedded-ruby, PHP or TWIG.
 
 NB We'll also create a *runner file called inventory.rb* which we can call to start the application.
+
+### Branch #2: Listing Items
+
+For the purpose of this exercise, we'll start with a hard coded inventory (**Item | Count | price**)
+
+1. Banana | 23 | 1.72
+2. Orange | 627 | 0.72
+3. Apple | 843 | 1.22
+
+- Let's start by defining what a single entry is. Entry is a class with the 3 attributes name, count and price.
+- In the main controller, we'll define a menu with if-else logic.
+- In the inventory_list model, we'll define the list entries method.
+
+[Commit: list items feature added]
