@@ -41,6 +41,8 @@ The **view** contains information pertaining to how data returned by the control
 
 NB We'll also create a *runner file called inventory.rb* which we can call to start the application.
 
+[Commit: added controllers, models and runner file]
+
 ### Branch #2: Listing Items
 
 For the purpose of this exercise, we'll start with a hard coded inventory (**Item | Count | price**)
