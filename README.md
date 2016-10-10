@@ -54,3 +54,15 @@ For the purpose of this exercise, we'll start with a hard coded inventory (**Ite
 - In the inventory_list model, we'll define the list entries method.
 
 [Commit: list items feature added]
+
+### Branch #3: Add To List
+
+In order to add an entry to the list, we add a new method to the InventoryList class.
+
+		def add_entry name,count,price
+    		@list.push(Entry.new(name,count,price))
+  		end
+  		
+We also extend the menu to show that option to the used.
+
+[Commit: add entry to list feature added]
