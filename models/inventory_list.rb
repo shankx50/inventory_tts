@@ -10,6 +10,10 @@ class InventoryList
   end
 
   def list_entries
-    @list.each{|entry| puts "#{entry.name} - Count: #{entry.count} - Unit Price: #{entry.price}"}
+    @list.each{|entry| p entry.print}
+  end
+
+  def add_entry name,count,price
+    @list.push(Entry.new(name,count,price))
   end
 end

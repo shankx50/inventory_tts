@@ -8,4 +8,8 @@ class Entry
     @price = price
   end
 
+  def print
+    return "#{self.name} - Count: #{self.count} - Unit Price: #{self.price}"
+  end
+
 end

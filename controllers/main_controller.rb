@@ -7,8 +7,11 @@ class MainController
   end
 
   def main_menu
-    puts "1 - List all entries"
-    puts "2 - Exit Application"
+    puts "1 - List All Entries"
+    puts "2 - Add Entry"
+    # puts "3 - Enter Edit Mode"
+    puts "4 - Exit Application"
+
     selection = gets.to_i
     puts "You picked #{selection}"
 
@@ -16,8 +19,23 @@ class MainController
       @inventory_list.list_entries
       main_menu
     elsif(selection == 2)
+      puts "New Entry Name:"
+      name = gets.chomp
+      puts "New Entry Count"
+      count = gets.to_i
+      puts "New Entry Price"
+      price = gets.to_f
+      @inventory_list.add_entry(name,count,price)
+      system "clear"
+      @inventory_list.list_entries
+      puts "---Entry Was Added---"
+      main_menu
+    elsif(selection == 3)
+      submenu
+    elsif(selection == 4)
       system "clear"
       system "exit"
     end
   end
+
 end
