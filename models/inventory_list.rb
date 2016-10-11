@@ -1,6 +1,7 @@
 require_relative 'entry'
 
-class InventoryList
+class InventoryList < Array
+
   attr_reader :list
   def initialize
     @list = []
@@ -10,10 +11,14 @@ class InventoryList
   end
 
   def list_entries
-    @list.each{|entry| p entry.print}
+    @list.each_with_index{|entry,index| p "Index:#{index} - #{entry.print}"}
   end
 
   def add_entry name,count,price
     @list.push(Entry.new(name,count,price))
+  end
+
+  def get_index(index)
+    return @list[index]
   end
 end

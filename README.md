@@ -64,7 +64,13 @@ In order to add an entry to the list, we add a new method to the InventoryList c
 		def add_entry name,count,price
     		@list.push(Entry.new(name,count,price))
   		end
-  		
+
 We also extend the menu to show that option to the used.
 
 [Commit: add entry to list feature added]
+
+### Branch #4: Edit Entry
+
+In order to edit and select a specific entry, we need to print the entries with their index so that they can be referenced. Let's also also update the main_controller in that regard.
+
+[Commit: edit entry feature added]

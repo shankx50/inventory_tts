@@ -9,7 +9,7 @@ class MainController
   def main_menu
     puts "1 - List All Entries"
     puts "2 - Add Entry"
-    # puts "3 - Enter Edit Mode"
+    puts "3 - Edit Entry"
     puts "4 - Exit Application"
 
     selection = gets.to_i
@@ -31,7 +31,30 @@ class MainController
       puts "---Entry Was Added---"
       main_menu
     elsif(selection == 3)
-      submenu
+      puts "Enter Entry Index"
+      index = gets.to_i
+      puts "Enter Attribute you want to change (name, count or price)"
+      attribute = gets.chomp.to_s
+      if(attribute == "name")
+        puts "What is the new name"
+        new_name = gets.chomp.to_s
+        p @inventory_list.get_index(index).name = new_name
+        puts "---Entry Was Edited---"
+        main_menu
+      elsif attribute == 'count'
+        puts "What is the new count"
+        new_count = gets.to_i
+        p @inventory_list.get_index(index).count = new_count
+        puts "---Entry Was Edited---"
+        main_menu
+      else
+        puts "What is the new price"
+        new_price = gets.to_f
+        p @inventory_list.get_index(index).price = new_price
+        puts "---Entry Was Edited---"
+        main_menu
+      end
+
     elsif(selection == 4)
       system "clear"
       system "exit"
