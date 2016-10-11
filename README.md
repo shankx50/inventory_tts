@@ -1,9 +1,8 @@
 This is an educational repository I use to help teach programming to adult learners. We'll build an inventory management program with the following features:
 
-1. List several items
-2. Allows a user to select an item and view the inventory count, change the number of the inventory, delete the item altogether, or even change the name.
-3. Create a new item and give the item an inventory count, and have this item now show up in the list of items you can select.
-4. Loops through until the user does not want to edit the list anymore.
+1. List several items.
+2. Allows a user to edit a specific entry.
+3. Add an entry to the list.
 
 ## How to use this repository
 
